@@ -68,8 +68,8 @@ def os_enrich(prune_output=True):
     }
     return os_data
 
-# more data
-splunk_logger.info(os_enrich())
+# send more data
+splunk_logger.info({'fields': os_enrich()})
 
-# MORE DATA!!!!!!!!
-splunk_logger.info(os.environ)
+# you get the idea
+splunk_logger.info({'fields': os.environ})
